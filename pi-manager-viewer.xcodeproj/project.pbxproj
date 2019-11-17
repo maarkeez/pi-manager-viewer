@@ -14,7 +14,9 @@
 		E5C779702381599A00BFAF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796F2381599A00BFAF0F /* Assets.xcassets */; };
 		E5C779732381599A00BFAF0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */; };
 		E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779802381C80900BFAF0F /* TemperatureService.swift */; };
-		E5C779892381CAF000BFAF0F /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779882381CAF000BFAF0F /* Degree.swift */; };
+		E5C779892381CAF000BFAF0F /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779882381CAF000BFAF0F /* Temperature.swift */; };
+		E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */; };
+		E5C77991238200C000BFAF0F /* GetPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C77990238200C000BFAF0F /* GetPromise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +36,9 @@
 		E5C779822381C92200BFAF0F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C779842381C92200BFAF0F /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C779862381C92200BFAF0F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5C779882381CAF000BFAF0F /* Degree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
+		E5C779882381CAF000BFAF0F /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
+		E5C77990238200C000BFAF0F /* GetPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPromise.swift; sourceTree = "<group>"; };
 		F2F74C72C5632D0C0C0707F1 /* Pods_pi_manager_viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pi_manager_viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,15 +99,33 @@
 			isa = PBXGroup;
 			children = (
 				E5C779682381599800BFAF0F /* AppDelegate.swift */,
-				E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */,
-				E5C779802381C80900BFAF0F /* TemperatureService.swift */,
+				E5C7798F238200A100BFAF0F /* RestFul */,
+				E5C7798A2381FC9800BFAF0F /* Temperature */,
 				E5C7796C2381599800BFAF0F /* Main.storyboard */,
 				E5C7796F2381599A00BFAF0F /* Assets.xcassets */,
 				E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */,
 				E5C779742381599A00BFAF0F /* Info.plist */,
-				E5C779882381CAF000BFAF0F /* Degree.swift */,
+				E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */,
 			);
 			path = "pi-manager-viewer";
+			sourceTree = "<group>";
+		};
+		E5C7798A2381FC9800BFAF0F /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */,
+				E5C779802381C80900BFAF0F /* TemperatureService.swift */,
+				E5C779882381CAF000BFAF0F /* Temperature.swift */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		E5C7798F238200A100BFAF0F /* RestFul */ = {
+			isa = PBXGroup;
+			children = (
+				E5C77990238200C000BFAF0F /* GetPromise.swift */,
+			);
+			path = RestFul;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,10 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C77991238200C000BFAF0F /* GetPromise.swift in Sources */,
+				E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */,
 				E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */,
 				E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */,
 				E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */,
-				E5C779892381CAF000BFAF0F /* Degree.swift in Sources */,
+				E5C779892381CAF000BFAF0F /* Temperature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

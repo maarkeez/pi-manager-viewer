@@ -1,5 +1,5 @@
 //
-//  TemperatureService.swift
+//  GetPromise.swift
 //  pi-manager-viewer
 //
 //  Created by David Márquez Delgado on 17/11/2019.
@@ -11,26 +11,16 @@ import Alamofire
 import PromiseKit
 import SwiftyJSON
 
-class TemperatureService {
+
+class GetPromise<T>{
     
-    private init(){}
-    
-    public static func singleton() -> TemperatureService {
-        return TemperatureService()
-    }
-    
-    private func getBaseUrl() -> String {
-        return "http://10.10.1.108:8080"
-    }
-    
-    func readTemperature() -> Promise<Degree> {
-        
+    func call() -> Promise<T> {
         return Promise { seal in
-            Alamofire.request(getBaseUrl() + "/api/degree", method: .get).responseJSON { response in
+            Alamofire.request(ServerConstants.baseUrl + getUrl(), method: .get).responseJSON { response in
                 switch response.result {
                 case .success(let json):
                     let jsonObj = JSON(json)
-                    seal.fulfill(Degree(degree: jsonObj["degrees"].double!))
+                    seal.fulfill(self.deSerialize(jsonObj)!)
                     
                 case .failure(let error):
                     seal.reject(error)
@@ -38,5 +28,11 @@ class TemperatureService {
             }
         }
     }
+    
+    // Must be overriden
+    func getUrl() -> String {return ""}
+    
+    // Must be overriden
+    func deSerialize(_ json:JSON) -> T? { return nil}
+    
 }
-

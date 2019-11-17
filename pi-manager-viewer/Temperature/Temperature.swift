@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Degree {
+class Temperature {
     private var degree : Double
     
     init(degree: Double){
