@@ -13,6 +13,8 @@
 		E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796C2381599800BFAF0F /* Main.storyboard */; };
 		E5C779702381599A00BFAF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796F2381599A00BFAF0F /* Assets.xcassets */; };
 		E5C779732381599A00BFAF0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */; };
+		E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779802381C80900BFAF0F /* TemperatureService.swift */; };
+		E5C779892381CAF000BFAF0F /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779882381CAF000BFAF0F /* Degree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,14 @@
 		E5C7796F2381599A00BFAF0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5C779722381599A00BFAF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5C779742381599A00BFAF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C7797A2381C78300BFAF0F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C7797C2381C78300BFAF0F /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C7797E2381C78300BFAF0F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C779802381C80900BFAF0F /* TemperatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureService.swift; sourceTree = "<group>"; };
+		E5C779822381C92200BFAF0F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C779842381C92200BFAF0F /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C779862381C92200BFAF0F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C779882381CAF000BFAF0F /* Degree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		F2F74C72C5632D0C0C0707F1 /* Pods_pi_manager_viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pi_manager_viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,6 +62,12 @@
 		DC3E90501918B36D748C6C2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5C779822381C92200BFAF0F /* Alamofire.framework */,
+				E5C779842381C92200BFAF0F /* PromiseKit.framework */,
+				E5C779862381C92200BFAF0F /* SwiftyJSON.framework */,
+				E5C7797A2381C78300BFAF0F /* Alamofire.framework */,
+				E5C7797C2381C78300BFAF0F /* PromiseKit.framework */,
+				E5C7797E2381C78300BFAF0F /* SwiftyJSON.framework */,
 				F2F74C72C5632D0C0C0707F1 /* Pods_pi_manager_viewer.framework */,
 			);
 			name = Frameworks;
@@ -80,10 +96,12 @@
 			children = (
 				E5C779682381599800BFAF0F /* AppDelegate.swift */,
 				E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */,
+				E5C779802381C80900BFAF0F /* TemperatureService.swift */,
 				E5C7796C2381599800BFAF0F /* Main.storyboard */,
 				E5C7796F2381599A00BFAF0F /* Assets.xcassets */,
 				E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */,
 				E5C779742381599A00BFAF0F /* Info.plist */,
+				E5C779882381CAF000BFAF0F /* Degree.swift */,
 			);
 			path = "pi-manager-viewer";
 			sourceTree = "<group>";
@@ -214,6 +232,8 @@
 			files = (
 				E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */,
 				E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */,
+				E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */,
+				E5C779892381CAF000BFAF0F /* Degree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

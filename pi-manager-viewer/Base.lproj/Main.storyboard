@@ -18,11 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="67 ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0p-nB-6na">
-                                <rect key="frame" x="141.5" y="556" width="131" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0p-nB-6na">
+                                <rect key="frame" x="8" y="556" width="398" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="fqz-Ru-dZL"/>
-                                    <constraint firstAttribute="width" constant="131" id="pSB-If-VnQ"/>
+                                    <constraint firstAttribute="height" constant="65" id="gVZ-s6-ysD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -39,9 +38,10 @@
                         <color key="backgroundColor" red="0.33583557103318756" green="0.6444622879015921" blue="0.66666668653488159" alpha="0.67000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="16D-wa-JC3" firstAttribute="centerX" secondItem="3Y8-Uz-AFL" secondAttribute="centerX" id="4My-Oc-9Bn"/>
+                            <constraint firstItem="v0p-nB-6na" firstAttribute="leading" secondItem="hH6-IJ-Crp" secondAttribute="leading" constant="8" id="A9N-Ji-3L1"/>
+                            <constraint firstItem="hH6-IJ-Crp" firstAttribute="trailing" secondItem="v0p-nB-6na" secondAttribute="trailing" constant="8" id="DcM-dC-Zni"/>
+                            <constraint firstItem="v0p-nB-6na" firstAttribute="top" secondItem="16D-wa-JC3" secondAttribute="bottom" constant="8" id="PuF-xB-Kbv"/>
                             <constraint firstItem="16D-wa-JC3" firstAttribute="centerY" secondItem="3Y8-Uz-AFL" secondAttribute="centerY" id="brq-AF-8Hc"/>
-                            <constraint firstItem="v0p-nB-6na" firstAttribute="top" secondItem="16D-wa-JC3" secondAttribute="bottom" constant="8" id="vQM-HO-WWD"/>
-                            <constraint firstItem="v0p-nB-6na" firstAttribute="centerX" secondItem="3Y8-Uz-AFL" secondAttribute="centerX" id="x1R-cv-JIZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hH6-IJ-Crp"/>
                     </view>
