@@ -15,7 +15,7 @@
 		E59CAA0F2391D05E0026AB54 /* MemoryUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA0E2391D05E0026AB54 /* MemoryUsageService.swift */; };
 		E59CAA122391D07C0026AB54 /* MemoryUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA112391D07C0026AB54 /* MemoryUsage.swift */; };
 		E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779682381599800BFAF0F /* AppDelegate.swift */; };
-		E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */; };
+		E5C7796B2381599800BFAF0F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7796A2381599800BFAF0F /* MainController.swift */; };
 		E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796C2381599800BFAF0F /* Main.storyboard */; };
 		E5C779702381599A00BFAF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796F2381599A00BFAF0F /* Assets.xcassets */; };
 		E5C779732381599A00BFAF0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 		E59CAA112391D07C0026AB54 /* MemoryUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryUsage.swift; sourceTree = "<group>"; };
 		E5C779652381599800BFAF0F /* pi-manager-viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-manager-viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C779682381599800BFAF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		E5C7796A2381599800BFAF0F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		E5C7796D2381599800BFAF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5C7796F2381599A00BFAF0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5C779722381599A00BFAF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,33 +94,10 @@
 			children = (
 				E59CAA022391BAA50026AB54 /* UiConstants.swift */,
 				E59CAA072391C5060026AB54 /* UIViewExtension.swift */,
+				E5C7796A2381599800BFAF0F /* MainController.swift */,
 			);
 			name = ui;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		E59CAA042391BBBF0026AB54 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				E5C779882381CAF000BFAF0F /* Temperature.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		E59CAA052391BBE60026AB54 /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		E59CAA062391BBEF0026AB54 /* client */ = {
-			isa = PBXGroup;
-			children = (
-				E5C779802381C80900BFAF0F /* TemperatureService.swift */,
-			);
-			path = client;
 			sourceTree = "<group>";
 		};
 		E59CAA0B2391C7460026AB54 /* cpu */ = {
@@ -179,9 +156,8 @@
 		E5C7798A2381FC9800BFAF0F /* temperature */ = {
 			isa = PBXGroup;
 			children = (
-				E59CAA042391BBBF0026AB54 /* model */,
-				E59CAA052391BBE60026AB54 /* ui */,
-				E59CAA062391BBEF0026AB54 /* client */,
+				E5C779802381C80900BFAF0F /* TemperatureService.swift */,
+				E5C779882381CAF000BFAF0F /* Temperature.swift */,
 			);
 			path = temperature;
 			sourceTree = "<group>";
@@ -189,8 +165,8 @@
 		E5C7798F238200A100BFAF0F /* restclient */ = {
 			isa = PBXGroup;
 			children = (
-				E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */,
 				E5C77990238200C000BFAF0F /* GetPromise.swift */,
+				E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */,
 			);
 			path = restclient;
 			sourceTree = "<group>";
@@ -324,7 +300,7 @@
 				E59CAA122391D07C0026AB54 /* MemoryUsage.swift in Sources */,
 				E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */,
 				E59CAA032391BAA50026AB54 /* UiConstants.swift in Sources */,
-				E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */,
+				E5C7796B2381599800BFAF0F /* MainController.swift in Sources */,
 				E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */,
 				E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */,
 				E59CAA082391C5060026AB54 /* UIViewExtension.swift in Sources */,

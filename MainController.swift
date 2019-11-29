@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TemperatureViewController: UIViewController {
+class MainController: UIViewController {
 
     @IBOutlet var myMainView: UIView!
     @IBOutlet weak var myTempLabel: UILabel!
