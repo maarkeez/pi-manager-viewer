@@ -45,7 +45,7 @@ class MainController: UIViewController {
     }
     
     private func decorateSection(mainView: UIView, labelStr: UILabel, label: UILabel){
-        mainView.layer.cornerRadius = 3
+        mainView.layer.cornerRadius = 5
         mainView.backgroundColor = UiConstants.SOFT_GREY
         
         labelStr.textColor = UiConstants.SOFT_YELLOW
