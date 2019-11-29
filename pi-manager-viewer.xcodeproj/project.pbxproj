@@ -12,6 +12,8 @@
 		E59CAA082391C5060026AB54 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA072391C5060026AB54 /* UIViewExtension.swift */; };
 		E59CAA0A2391C7400026AB54 /* CpuUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA092391C7400026AB54 /* CpuUsageService.swift */; };
 		E59CAA0D2391C7600026AB54 /* CpuUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA0C2391C7600026AB54 /* CpuUsage.swift */; };
+		E59CAA0F2391D05E0026AB54 /* MemoryUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA0E2391D05E0026AB54 /* MemoryUsageService.swift */; };
+		E59CAA122391D07C0026AB54 /* MemoryUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA112391D07C0026AB54 /* MemoryUsage.swift */; };
 		E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779682381599800BFAF0F /* AppDelegate.swift */; };
 		E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */; };
 		E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796C2381599800BFAF0F /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		E59CAA072391C5060026AB54 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E59CAA092391C7400026AB54 /* CpuUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuUsageService.swift; sourceTree = "<group>"; };
 		E59CAA0C2391C7600026AB54 /* CpuUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuUsage.swift; sourceTree = "<group>"; };
+		E59CAA0E2391D05E0026AB54 /* MemoryUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryUsageService.swift; sourceTree = "<group>"; };
+		E59CAA112391D07C0026AB54 /* MemoryUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryUsage.swift; sourceTree = "<group>"; };
 		E5C779652381599800BFAF0F /* pi-manager-viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-manager-viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C779682381599800BFAF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,15 @@
 			path = cpu;
 			sourceTree = "<group>";
 		};
+		E59CAA102391D0620026AB54 /* memory */ = {
+			isa = PBXGroup;
+			children = (
+				E59CAA0E2391D05E0026AB54 /* MemoryUsageService.swift */,
+				E59CAA112391D07C0026AB54 /* MemoryUsage.swift */,
+			);
+			path = memory;
+			sourceTree = "<group>";
+		};
 		E5C7795C2381599800BFAF0F = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 				E59CAA012391BA8C0026AB54 /* ui */,
 				E5C7798F238200A100BFAF0F /* restclient */,
 				E59CAA0B2391C7460026AB54 /* cpu */,
+				E59CAA102391D0620026AB54 /* memory */,
 				E5C7798A2381FC9800BFAF0F /* temperature */,
 				E5C7796C2381599800BFAF0F /* Main.storyboard */,
 				E5C7796F2381599A00BFAF0F /* Assets.xcassets */,
@@ -307,6 +321,7 @@
 			files = (
 				E5C77991238200C000BFAF0F /* GetPromise.swift in Sources */,
 				E59CAA0A2391C7400026AB54 /* CpuUsageService.swift in Sources */,
+				E59CAA122391D07C0026AB54 /* MemoryUsage.swift in Sources */,
 				E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */,
 				E59CAA032391BAA50026AB54 /* UiConstants.swift in Sources */,
 				E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */,
@@ -314,6 +329,7 @@
 				E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */,
 				E59CAA082391C5060026AB54 /* UIViewExtension.swift in Sources */,
 				E59CAA0D2391C7600026AB54 /* CpuUsage.swift in Sources */,
+				E59CAA0F2391D05E0026AB54 /* MemoryUsageService.swift in Sources */,
 				E5C779892381CAF000BFAF0F /* Temperature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,11 @@ class TemperatureViewController: UIViewController {
     @IBOutlet weak var myCpuLabelStr: UILabel!
     @IBOutlet weak var myCpuLabel: UILabel!
     
+    @IBOutlet weak var myMemoryView: UIView!
+    @IBOutlet weak var myMemoryLabelStr: UILabel!
+    @IBOutlet weak var myMemoryLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,30 +31,30 @@ class TemperatureViewController: UIViewController {
         self.myMainView.backgroundColor = UiConstants.DARK_GREY
         
         // Temperature
-        self.myTempView.layer.cornerRadius = 3
-        self.myTempView.backgroundColor = UiConstants.SOFT_GREY
-        
-        self.myTempLabelStr.textColor = UiConstants.SOFT_YELLOW
-
-        self.myTempLabel.textColor = UiConstants.BLUE
-        self.myTempLabel.generateShadow()
-        
+        decorateSection(mainView: myTempView, labelStr: myTempLabelStr, label: myTempLabel)
 
         // Cpu
-        self.myCpuView.layer.cornerRadius = 3
-        self.myCpuView.backgroundColor = UiConstants.SOFT_GREY
-        
-        self.myCpuLabelStr.textColor = UiConstants.SOFT_YELLOW
-        
-        self.myCpuLabel.textColor = UiConstants.BLUE
-        self.myCpuLabel.generateShadow()
+        decorateSection(mainView: myCpuView, labelStr: myCpuLabelStr, label: myCpuLabel)
 
-
-        updateTemperature()
+        // Memory
+        decorateSection(mainView: myMemoryView, labelStr: myMemoryLabelStr, label: myMemoryLabel)
+        
         updateCpu()
+        updateTemperature()
+        updateMemory()
+    }
+    
+    private func decorateSection(mainView: UIView, labelStr: UILabel, label: UILabel){
+        mainView.layer.cornerRadius = 3
+        mainView.backgroundColor = UiConstants.SOFT_GREY
+        
+        labelStr.textColor = UiConstants.SOFT_YELLOW
+        
+        label.textColor = UiConstants.BLUE
+        label.generateShadow()
     }
 
-    private func updateTemperature(){
+    private func updateTemperature() {
         
         TemperatureService.singleton().readTemperature().done { degree in
             self.myTempLabel.text = "\(degree.getDegree()) ºC"
@@ -58,13 +63,23 @@ class TemperatureViewController: UIViewController {
         }
     }
     
-    private func updateCpu(){
+    private func updateCpu() {
         
         CpuUsageService.singleton().readCpuUsage().done { cpu in
-            let free = String(format:"%.2f", cpu.getTotal() - cpu.getUsed() )
-            self.myCpuLabel.text = "Used: \(cpu.getUsed()) %\nFree: \(free) %"
-        }.catch{error in
+                let free = String(format:"%.2f", cpu.getTotal() - cpu.getUsed() )
+                self.myCpuLabel.text = "Used: \(cpu.getUsed()) %\nFree: \(free) %"
+            }.catch{ error in
                 self.myCpuLabel.text = "Could not load cpu"
+        }
+    }
+    
+    private func updateMemory() {
+        
+        MemoryUsageService.singleton().readMemoryUsage().done { memory in
+                let free = String(format:"%.2f", memory.getTotal() - memory.getUsed() )
+                self.myMemoryLabel.text = "Used: \(memory.getUsed()) %\nFree: \(free) %"
+            }.catch{error in
+                self.myMemoryLabel.text = "Could not load memory"
         }
     }
 
