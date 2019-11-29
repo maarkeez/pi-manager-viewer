@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		907FBC087298EAF014BE7128 /* Pods_pi_manager_viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F74C72C5632D0C0C0707F1 /* Pods_pi_manager_viewer.framework */; };
+		E59CAA032391BAA50026AB54 /* UiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA022391BAA50026AB54 /* UiConstants.swift */; };
+		E59CAA082391C5060026AB54 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA072391C5060026AB54 /* UIViewExtension.swift */; };
+		E59CAA0A2391C7400026AB54 /* CpuUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA092391C7400026AB54 /* CpuUsageService.swift */; };
+		E59CAA0D2391C7600026AB54 /* CpuUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA0C2391C7600026AB54 /* CpuUsage.swift */; };
 		E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779682381599800BFAF0F /* AppDelegate.swift */; };
 		E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */; };
 		E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796C2381599800BFAF0F /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		2301764C5EEABB859E4774FF /* Pods-pi-manager-viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-manager-viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pi-manager-viewer/Pods-pi-manager-viewer.debug.xcconfig"; sourceTree = "<group>"; };
 		D2FAC50E4F4E9B545333FA0F /* Pods-pi-manager-viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-manager-viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-pi-manager-viewer/Pods-pi-manager-viewer.release.xcconfig"; sourceTree = "<group>"; };
+		E59CAA022391BAA50026AB54 /* UiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiConstants.swift; sourceTree = "<group>"; };
+		E59CAA072391C5060026AB54 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E59CAA092391C7400026AB54 /* CpuUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuUsageService.swift; sourceTree = "<group>"; };
+		E59CAA0C2391C7600026AB54 /* CpuUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuUsage.swift; sourceTree = "<group>"; };
 		E5C779652381599800BFAF0F /* pi-manager-viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-manager-viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C779682381599800BFAF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +85,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E59CAA012391BA8C0026AB54 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				E59CAA022391BAA50026AB54 /* UiConstants.swift */,
+				E59CAA072391C5060026AB54 /* UIViewExtension.swift */,
+			);
+			name = ui;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E59CAA042391BBBF0026AB54 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E5C779882381CAF000BFAF0F /* Temperature.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E59CAA052391BBE60026AB54 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		E59CAA062391BBEF0026AB54 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				E5C779802381C80900BFAF0F /* TemperatureService.swift */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		E59CAA0B2391C7460026AB54 /* cpu */ = {
+			isa = PBXGroup;
+			children = (
+				E59CAA092391C7400026AB54 /* CpuUsageService.swift */,
+				E59CAA0C2391C7600026AB54 /* CpuUsage.swift */,
+			);
+			path = cpu;
+			sourceTree = "<group>";
+		};
 		E5C7795C2381599800BFAF0F = {
 			isa = PBXGroup;
 			children = (
@@ -99,33 +150,35 @@
 			isa = PBXGroup;
 			children = (
 				E5C779682381599800BFAF0F /* AppDelegate.swift */,
-				E5C7798F238200A100BFAF0F /* RestFul */,
-				E5C7798A2381FC9800BFAF0F /* Temperature */,
+				E59CAA012391BA8C0026AB54 /* ui */,
+				E5C7798F238200A100BFAF0F /* restclient */,
+				E59CAA0B2391C7460026AB54 /* cpu */,
+				E5C7798A2381FC9800BFAF0F /* temperature */,
 				E5C7796C2381599800BFAF0F /* Main.storyboard */,
 				E5C7796F2381599A00BFAF0F /* Assets.xcassets */,
 				E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */,
 				E5C779742381599A00BFAF0F /* Info.plist */,
-				E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */,
 			);
 			path = "pi-manager-viewer";
 			sourceTree = "<group>";
 		};
-		E5C7798A2381FC9800BFAF0F /* Temperature */ = {
+		E5C7798A2381FC9800BFAF0F /* temperature */ = {
 			isa = PBXGroup;
 			children = (
-				E5C7796A2381599800BFAF0F /* TemperatureViewController.swift */,
-				E5C779802381C80900BFAF0F /* TemperatureService.swift */,
-				E5C779882381CAF000BFAF0F /* Temperature.swift */,
+				E59CAA042391BBBF0026AB54 /* model */,
+				E59CAA052391BBE60026AB54 /* ui */,
+				E59CAA062391BBEF0026AB54 /* client */,
 			);
-			path = Temperature;
+			path = temperature;
 			sourceTree = "<group>";
 		};
-		E5C7798F238200A100BFAF0F /* RestFul */ = {
+		E5C7798F238200A100BFAF0F /* restclient */ = {
 			isa = PBXGroup;
 			children = (
+				E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */,
 				E5C77990238200C000BFAF0F /* GetPromise.swift */,
 			);
-			path = RestFul;
+			path = restclient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,10 +306,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C77991238200C000BFAF0F /* GetPromise.swift in Sources */,
+				E59CAA0A2391C7400026AB54 /* CpuUsageService.swift in Sources */,
 				E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */,
+				E59CAA032391BAA50026AB54 /* UiConstants.swift in Sources */,
 				E5C7796B2381599800BFAF0F /* TemperatureViewController.swift in Sources */,
 				E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */,
 				E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */,
+				E59CAA082391C5060026AB54 /* UIViewExtension.swift in Sources */,
+				E59CAA0D2391C7600026AB54 /* CpuUsage.swift in Sources */,
 				E5C779892381CAF000BFAF0F /* Temperature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
