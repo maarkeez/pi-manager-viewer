@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilesViewCellTableViewCell" rowHeight="85" id="KGk-i7-Jjw" customClass="FilesViewCellTableViewCell" customModule="pi_manager_viewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVR-aC-xIE">
+                        <rect key="frame" x="16" y="2" width="288" height="80.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" translatesAutoresizingMaskIntoConstraints="NO" id="Bve-ca-g7Y">
+                                <rect key="frame" x="16" y="25.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Lwl-OG-ThH"/>
+                                    <constraint firstAttribute="height" constant="30" id="j3e-jX-Jsk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-Jz-tZ3">
+                                <rect key="frame" x="62" y="17.5" width="218" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="B3a-ul-khJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="426-UQ-lyH">
+                                <rect key="frame" x="62" y="43.5" width="218" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FYd-Yk-N5W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bve-ca-g7Y" firstAttribute="centerY" secondItem="NVR-aC-xIE" secondAttribute="centerY" id="2pv-cE-Hqe"/>
+                            <constraint firstAttribute="trailing" secondItem="EvP-Jz-tZ3" secondAttribute="trailing" constant="8" id="5eA-qq-p2A"/>
+                            <constraint firstItem="426-UQ-lyH" firstAttribute="top" secondItem="EvP-Jz-tZ3" secondAttribute="bottom" id="PnV-fG-iL7"/>
+                            <constraint firstItem="EvP-Jz-tZ3" firstAttribute="leading" secondItem="Bve-ca-g7Y" secondAttribute="trailing" constant="16" id="aSP-CQ-K59"/>
+                            <constraint firstAttribute="trailing" secondItem="426-UQ-lyH" secondAttribute="trailing" constant="8" id="bv2-dK-dUx"/>
+                            <constraint firstItem="426-UQ-lyH" firstAttribute="leading" secondItem="Bve-ca-g7Y" secondAttribute="trailing" constant="16" id="cz6-az-xsj"/>
+                            <constraint firstItem="EvP-Jz-tZ3" firstAttribute="centerY" secondItem="NVR-aC-xIE" secondAttribute="centerY" constant="-10" id="gF1-gV-Kzb"/>
+                            <constraint firstItem="Bve-ca-g7Y" firstAttribute="leading" secondItem="NVR-aC-xIE" secondAttribute="leading" constant="16" id="uW3-wl-ayv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="NVR-aC-xIE" secondAttribute="trailing" constant="16" id="5yP-HQ-k3q"/>
+                    <constraint firstItem="NVR-aC-xIE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PkZ-Aa-Yeu"/>
+                    <constraint firstAttribute="bottom" secondItem="NVR-aC-xIE" secondAttribute="bottom" constant="2" id="nQq-91-yuc"/>
+                    <constraint firstItem="NVR-aC-xIE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="o37-ev-CZb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="myFileImage" destination="Bve-ca-g7Y" id="vE1-to-nSe"/>
+                <outlet property="myFileName" destination="EvP-Jz-tZ3" id="Ejr-G0-XOT"/>
+                <outlet property="myFileSize" destination="426-UQ-lyH" id="n4W-nA-kRd"/>
+                <outlet property="myInternalView" destination="NVR-aC-xIE" id="ma3-6Y-krD"/>
+            </connections>
+            <point key="canvasLocation" x="105.79710144927537" y="53.236607142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="folder" width="512" height="512"/>
+    </resources>
+</document>

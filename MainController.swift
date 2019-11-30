@@ -17,12 +17,17 @@ class MainController: UIViewController {
   
     @IBOutlet weak var myCpuView: PercentageCircle!
     @IBOutlet weak var myMemoryView: PercentageCircle!
+    @IBOutlet weak var goToFilesBtn: UIBarButtonItem!
     
     var timer: Timer?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Navigation controler
+        navigationController?.navigationBar.barTintColor = UiConstants.SOFT_PINK_NAVIGATION
+        goToFilesBtn.tintColor = UiConstants.SOFT_YELLOW
         
         // Main
         self.myMainView.backgroundColor = UiConstants.DARK_GREY
@@ -33,12 +38,16 @@ class MainController: UIViewController {
         myCpuView.setTitle("CPU")
         myMemoryView.setTitle("Memory")
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // Start updating system metrics
         updateSystemMetrics()
         timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
             self.updateSystemMetrics()
         }
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,7 +75,7 @@ class MainController: UIViewController {
         TemperatureService.singleton().readTemperature().done { degree in
             self.myTempLabel.text = "\(degree.getDegree()) ºC"
         }.catch{error in
-            self.myTempLabel.text = "Could not load temperature"
+            self.myTempLabel.text = "0 ºC"
         }
     }
     

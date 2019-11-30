@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		907FBC087298EAF014BE7128 /* Pods_pi_manager_viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F74C72C5632D0C0C0707F1 /* Pods_pi_manager_viewer.framework */; };
+		E52E54372392E7FC003B3230 /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E54362392E7FC003B3230 /* FilesViewController.swift */; };
+		E52E543A2392F22A003B3230 /* FilesViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52E54382392F22A003B3230 /* FilesViewCellTableViewCell.swift */; };
+		E52E543B2392F22B003B3230 /* FilesViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52E54392392F22A003B3230 /* FilesViewCellTableViewCell.xib */; };
 		E59CAA032391BAA50026AB54 /* UiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA022391BAA50026AB54 /* UiConstants.swift */; };
 		E59CAA082391C5060026AB54 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA072391C5060026AB54 /* UIViewExtension.swift */; };
 		E59CAA0A2391C7400026AB54 /* CpuUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA092391C7400026AB54 /* CpuUsageService.swift */; };
@@ -19,17 +22,20 @@
 		E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779682381599800BFAF0F /* AppDelegate.swift */; };
 		E5C7796B2381599800BFAF0F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7796A2381599800BFAF0F /* MainController.swift */; };
 		E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796C2381599800BFAF0F /* Main.storyboard */; };
-		E5C779702381599A00BFAF0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796F2381599A00BFAF0F /* Assets.xcassets */; };
 		E5C779732381599A00BFAF0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */; };
 		E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779802381C80900BFAF0F /* TemperatureService.swift */; };
 		E5C779892381CAF000BFAF0F /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779882381CAF000BFAF0F /* Temperature.swift */; };
 		E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */; };
 		E5C77991238200C000BFAF0F /* GetPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C77990238200C000BFAF0F /* GetPromise.swift */; };
+		E5E93E3E23932E0A000C66FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E93E3D23932E0A000C66FB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2301764C5EEABB859E4774FF /* Pods-pi-manager-viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-manager-viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pi-manager-viewer/Pods-pi-manager-viewer.debug.xcconfig"; sourceTree = "<group>"; };
 		D2FAC50E4F4E9B545333FA0F /* Pods-pi-manager-viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pi-manager-viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-pi-manager-viewer/Pods-pi-manager-viewer.release.xcconfig"; sourceTree = "<group>"; };
+		E52E54362392E7FC003B3230 /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		E52E54382392F22A003B3230 /* FilesViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		E52E54392392F22A003B3230 /* FilesViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilesViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		E59CAA022391BAA50026AB54 /* UiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiConstants.swift; sourceTree = "<group>"; };
 		E59CAA072391C5060026AB54 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E59CAA092391C7400026AB54 /* CpuUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuUsageService.swift; sourceTree = "<group>"; };
@@ -42,7 +48,6 @@
 		E5C779682381599800BFAF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C7796A2381599800BFAF0F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		E5C7796D2381599800BFAF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E5C7796F2381599A00BFAF0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5C779722381599A00BFAF0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5C779742381599A00BFAF0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C7797A2381C78300BFAF0F /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +60,7 @@
 		E5C779882381CAF000BFAF0F /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
 		E5C77990238200C000BFAF0F /* GetPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPromise.swift; sourceTree = "<group>"; };
+		E5E93E3D23932E0A000C66FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2F74C72C5632D0C0C0707F1 /* Pods_pi_manager_viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pi_manager_viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,12 +99,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E52E543C23931AA7003B3230 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				E52E54362392E7FC003B3230 /* FilesViewController.swift */,
+				E52E54382392F22A003B3230 /* FilesViewCellTableViewCell.swift */,
+				E52E54392392F22A003B3230 /* FilesViewCellTableViewCell.xib */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
 		E59CAA012391BA8C0026AB54 /* ui */ = {
 			isa = PBXGroup;
 			children = (
 				E59CAA022391BAA50026AB54 /* UiConstants.swift */,
 				E59CAA072391C5060026AB54 /* UIViewExtension.swift */,
 				E5C7796A2381599800BFAF0F /* MainController.swift */,
+				E52E543C23931AA7003B3230 /* files */,
 				E59CAA1B2391F4CB0026AB54 /* chart */,
 			);
 			name = ui;
@@ -135,6 +152,7 @@
 		E5C7795C2381599800BFAF0F = {
 			isa = PBXGroup;
 			children = (
+				E5E93E3D23932E0A000C66FB /* Assets.xcassets */,
 				E5C779672381599800BFAF0F /* pi-manager-viewer */,
 				E5C779662381599800BFAF0F /* Products */,
 				28F5723F1062E2F091264600 /* Pods */,
@@ -160,7 +178,6 @@
 				E59CAA102391D0620026AB54 /* memory */,
 				E5C7798A2381FC9800BFAF0F /* temperature */,
 				E5C7796C2381599800BFAF0F /* Main.storyboard */,
-				E5C7796F2381599A00BFAF0F /* Assets.xcassets */,
 				E5C779712381599A00BFAF0F /* LaunchScreen.storyboard */,
 				E5C779742381599A00BFAF0F /* Info.plist */,
 			);
@@ -247,8 +264,9 @@
 			files = (
 				E5C779732381599A00BFAF0F /* LaunchScreen.storyboard in Resources */,
 				E59CAA1A2391E8F70026AB54 /* PercentageCircle.xib in Resources */,
-				E5C779702381599A00BFAF0F /* Assets.xcassets in Resources */,
+				E52E543B2392F22B003B3230 /* FilesViewCellTableViewCell.xib in Resources */,
 				E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */,
+				E5E93E3E23932E0A000C66FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,8 +330,10 @@
 			files = (
 				E5C77991238200C000BFAF0F /* GetPromise.swift in Sources */,
 				E59CAA0A2391C7400026AB54 /* CpuUsageService.swift in Sources */,
+				E52E54372392E7FC003B3230 /* FilesViewController.swift in Sources */,
 				E59CAA122391D07C0026AB54 /* MemoryUsage.swift in Sources */,
 				E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */,
+				E52E543A2392F22A003B3230 /* FilesViewCellTableViewCell.swift in Sources */,
 				E59CAA032391BAA50026AB54 /* UiConstants.swift in Sources */,
 				E59CAA182391E7F40026AB54 /* PercentageCircle.swift in Sources */,
 				E5C7796B2381599800BFAF0F /* MainController.swift in Sources */,

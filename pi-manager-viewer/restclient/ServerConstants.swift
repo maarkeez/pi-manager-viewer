@@ -9,5 +9,5 @@
 import Foundation
 
 class ServerConstants {
-    public static let baseUrl = "http://10.10.1.108:8080"
+    public static let baseUrl = "http://85.57.194.90:9091"
 }
