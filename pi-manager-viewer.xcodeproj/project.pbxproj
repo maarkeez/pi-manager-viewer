@@ -15,6 +15,8 @@
 		E59CAA0F2391D05E0026AB54 /* MemoryUsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA0E2391D05E0026AB54 /* MemoryUsageService.swift */; };
 		E59CAA122391D07C0026AB54 /* MemoryUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA112391D07C0026AB54 /* MemoryUsage.swift */; };
 		E59CAA142391D6510026AB54 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA132391D6510026AB54 /* CircleViewController.swift */; };
+		E59CAA182391E7F40026AB54 /* PercentageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59CAA172391E7F40026AB54 /* PercentageCircle.swift */; };
+		E59CAA1A2391E8F70026AB54 /* PercentageCircle.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59CAA192391E8F70026AB54 /* PercentageCircle.xib */; };
 		E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C779682381599800BFAF0F /* AppDelegate.swift */; };
 		E5C7796B2381599800BFAF0F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7796A2381599800BFAF0F /* MainController.swift */; };
 		E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C7796C2381599800BFAF0F /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		E59CAA0E2391D05E0026AB54 /* MemoryUsageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryUsageService.swift; sourceTree = "<group>"; };
 		E59CAA112391D07C0026AB54 /* MemoryUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryUsage.swift; sourceTree = "<group>"; };
 		E59CAA132391D6510026AB54 /* CircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		E59CAA172391E7F40026AB54 /* PercentageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageCircle.swift; sourceTree = "<group>"; };
+		E59CAA192391E8F70026AB54 /* PercentageCircle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PercentageCircle.xib; sourceTree = "<group>"; };
 		E5C779652381599800BFAF0F /* pi-manager-viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pi-manager-viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C779682381599800BFAF0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5C7796A2381599800BFAF0F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				E59CAA072391C5060026AB54 /* UIViewExtension.swift */,
 				E5C7796A2381599800BFAF0F /* MainController.swift */,
 				E59CAA132391D6510026AB54 /* CircleViewController.swift */,
+				E59CAA172391E7F40026AB54 /* PercentageCircle.swift */,
+				E59CAA192391E8F70026AB54 /* PercentageCircle.xib */,
 			);
 			name = ui;
 			path = ..;
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C779732381599A00BFAF0F /* LaunchScreen.storyboard in Resources */,
+				E59CAA1A2391E8F70026AB54 /* PercentageCircle.xib in Resources */,
 				E5C779702381599A00BFAF0F /* Assets.xcassets in Resources */,
 				E5C7796E2381599800BFAF0F /* Main.storyboard in Resources */,
 			);
@@ -303,6 +310,7 @@
 				E59CAA122391D07C0026AB54 /* MemoryUsage.swift in Sources */,
 				E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */,
 				E59CAA032391BAA50026AB54 /* UiConstants.swift in Sources */,
+				E59CAA182391E7F40026AB54 /* PercentageCircle.swift in Sources */,
 				E5C7796B2381599800BFAF0F /* MainController.swift in Sources */,
 				E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */,
 				E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */,

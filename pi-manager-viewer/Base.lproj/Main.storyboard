@@ -169,38 +169,12 @@ Free:</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOy-At-Ixr">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOy-At-Ixr" customClass="PercentageCircle" customModule="pi_manager_viewer" customModuleProvider="target">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-YG-k9K">
-                                        <rect key="frame" x="0.0" y="120" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="khr-oO-0RF"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FREE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFY-DQ-dNJ">
-                                        <rect key="frame" x="0.0" y="150" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="ZpM-p1-doY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="gDL-YG-k9K" firstAttribute="leading" secondItem="TOy-At-Ixr" secondAttribute="leading" id="0gP-Ab-Cdk"/>
-                                    <constraint firstAttribute="trailing" secondItem="gDL-YG-k9K" secondAttribute="trailing" id="CYf-qu-Zxa"/>
-                                    <constraint firstItem="gDL-YG-k9K" firstAttribute="top" secondItem="TOy-At-Ixr" secondAttribute="top" constant="120" id="OsG-j6-HAp"/>
-                                    <constraint firstAttribute="bottom" secondItem="DFY-DQ-dNJ" secondAttribute="bottom" constant="120" id="QCc-mU-nRQ"/>
-                                    <constraint firstItem="DFY-DQ-dNJ" firstAttribute="leading" secondItem="TOy-At-Ixr" secondAttribute="leading" id="UvW-aS-lkp"/>
                                     <constraint firstAttribute="height" constant="300" id="WHF-d8-MGp"/>
                                     <constraint firstAttribute="width" constant="300" id="aVu-kf-BMM"/>
-                                    <constraint firstAttribute="trailing" secondItem="DFY-DQ-dNJ" secondAttribute="trailing" id="iRW-Aa-KZK"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -212,10 +186,8 @@ Free:</string>
                         <viewLayoutGuide key="safeArea" id="Qvd-V0-rT7"/>
                     </view>
                     <connections>
-                        <outlet property="myCircleView" destination="TOy-At-Ixr" id="fJR-9v-IBM"/>
-                        <outlet property="myFreeLabel" destination="DFY-DQ-dNJ" id="UnV-lB-56o"/>
+                        <outlet property="myCircleView" destination="TOy-At-Ixr" id="x7H-tu-ZZi"/>
                         <outlet property="myMainView" destination="j7v-BQ-ygW" id="mEc-Ue-iDL"/>
-                        <outlet property="myUsedLabel" destination="gDL-YG-k9K" id="Uxc-pc-raW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkZ-Iy-q4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
