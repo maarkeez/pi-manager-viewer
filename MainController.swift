@@ -18,7 +18,7 @@ class MainController: UIViewController {
     @IBOutlet weak var myCpuView: PercentageCircle!
     @IBOutlet weak var myMemoryView: PercentageCircle!
     
-    
+    var timer: Timer?
     
     
     override func viewDidLoad() {
@@ -33,6 +33,19 @@ class MainController: UIViewController {
         myCpuView.setTitle("CPU")
         myMemoryView.setTitle("Memory")
         
+        // Start updating system metrics
+        updateSystemMetrics()
+        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
+            self.updateSystemMetrics()
+        }
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
+    }
+    
+    private func updateSystemMetrics() {
         updateCpu()
         updateTemperature()
         updateMemory()

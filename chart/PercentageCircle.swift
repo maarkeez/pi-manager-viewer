@@ -17,6 +17,8 @@ class PercentageCircle: UIView {
     
     // MARK - Override's to be a reutilizable UIView
     let nibName = "PercentageCircle"
+    var firstSemiCircleLayer   = CAShapeLayer()
+    var secondSemiCircleLayer   = CAShapeLayer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,6 +42,8 @@ class PercentageCircle: UIView {
         myUsedLabel.textColor = UiConstants.SOFT_PINK
         myFreeLabel.textColor = UiConstants.SOFT_YELLOW
         myTitle.textColor = UiConstants.SOFT_YELLOW
+        self.layer.addSublayer(firstSemiCircleLayer)
+        self.layer.addSublayer(secondSemiCircleLayer)
     }
  
     // Allows change the upper title
@@ -56,28 +60,28 @@ class PercentageCircle: UIView {
             myUsedLabel.text = String(format:"USED: %.2f", usedPercentage )
             myFreeLabel.text = ""
             
-            drawCircle(UiConstants.SOFT_PINK, from: 0.0, to: 100.0)
+            drawCircle(UiConstants.SOFT_PINK, from: 0.0, to: 100.0, in: firstSemiCircleLayer)
             
         } else {
             
             myUsedLabel.text = String(format:"USED: %.2f", usedPercentage )
             myFreeLabel.text = String(format:"FREE: %.2f", 100.0 - usedPercentage )
             
-            drawCircle(UiConstants.SOFT_PINK, from: 0.5, to: usedPercentage - 0.5)
-            drawCircle(UiConstants.SOFT_YELLOW, from: usedPercentage + 0.5, to: 99.5)
+            drawCircle(UiConstants.SOFT_PINK, from: 0.5, to: usedPercentage - 0.5,  in: firstSemiCircleLayer)
+            drawCircle(UiConstants.SOFT_YELLOW, from: usedPercentage + 0.5, to: 99.5, in: secondSemiCircleLayer)
         }
         
     }
     
     
-    private func drawCircle(_ color: UIColor, from: Double, to: Double) {
+    private func drawCircle(_ color: UIColor, from: Double, to: Double, in semiCircleLayer: CAShapeLayer) {
 
         let completeCircle = CGFloat(Double.pi*2)
         let start = completeCircle * CGFloat(from) / 100
         let end = completeCircle * CGFloat(to) / 100
         
         let lineWith = CGFloat(integerLiteral: 12)
-        let semiCircleLayer   = CAShapeLayer()
+        
         let center = CGPoint (x: self.frame.size.width / 2 , y: self.frame.size.height / 2 )
         let circleRadius = (self.frame.size.width / 2) - lineWith * 2
         let circlePath = UIBezierPath(arcCenter: center, radius: circleRadius, startAngle: start - CGFloat(Double.pi/2) , endAngle: end - CGFloat(Double.pi/2), clockwise: true)
@@ -90,6 +94,6 @@ class PercentageCircle: UIView {
         semiCircleLayer.strokeStart = 0
         semiCircleLayer.strokeEnd  = 1
         
-        self.layer.addSublayer(semiCircleLayer)
+        
     }
 }
