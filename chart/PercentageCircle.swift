@@ -13,7 +13,9 @@ class PercentageCircle: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var myUsedLabel: UILabel!
     @IBOutlet weak var myFreeLabel: UILabel!
+    @IBOutlet weak var myTitle: UILabel!
     
+    // MARK - Override's to be a reutilizable UIView
     let nibName = "PercentageCircle"
     
     override init(frame: CGRect) {
@@ -33,16 +35,20 @@ class PercentageCircle: UIView {
         self.addSubview(contentView)
     }
     
-    // DMD STARTS HERE
-    
     override func draw(_ rect: CGRect) {
-        // Drawing code
         contentView.backgroundColor = UiConstants.SOFT_GREY
         myUsedLabel.textColor = UiConstants.SOFT_PINK
         myFreeLabel.textColor = UiConstants.SOFT_YELLOW
+        myTitle.textColor = UiConstants.SOFT_YELLOW
     }
  
-
+    // Allows change the upper title
+    public func setTitle(_ title: String){
+        myTitle.text = title
+    }
+    
+    // Draws a circle, only can be invoked once.
+    // it does not render twice the circle
     public func drawCircleWith(usedPercentage: Double) {
         
         if (usedPercentage > 100.0) {
@@ -70,9 +76,9 @@ class PercentageCircle: UIView {
         let start = completeCircle * CGFloat(from) / 100
         let end = completeCircle * CGFloat(to) / 100
         
-        let lineWith = CGFloat(integerLiteral: 18)
+        let lineWith = CGFloat(integerLiteral: 12)
         let semiCircleLayer   = CAShapeLayer()
-        let center = CGPoint (x: self.frame.size.width / 2 , y: self.frame.size.height / 2)
+        let center = CGPoint (x: self.frame.size.width / 2 , y: self.frame.size.height / 2 )
         let circleRadius = (self.frame.size.width / 2) - lineWith * 2
         let circlePath = UIBezierPath(arcCenter: center, radius: circleRadius, startAngle: start - CGFloat(Double.pi/2) , endAngle: end - CGFloat(Double.pi/2), clockwise: true)
         

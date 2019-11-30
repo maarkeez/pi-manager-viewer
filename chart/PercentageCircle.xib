@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="654-Wf-tqq"/>
                 <outlet property="myFreeLabel" destination="ke1-Ir-BCi" id="UM4-6m-Gxr"/>
+                <outlet property="myTitle" destination="rHI-DM-DtZ" id="aLu-hr-GKw"/>
                 <outlet property="myUsedLabel" destination="xk0-cp-IqA" id="R4S-h7-14g"/>
             </connections>
         </placeholder>
@@ -40,6 +41,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHI-DM-DtZ">
+                    <rect key="frame" x="8" y="8" width="154" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="QIE-om-fbu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -47,8 +57,11 @@
                 <constraint firstItem="xk0-cp-IqA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-15" id="Bkq-m2-coR"/>
                 <constraint firstItem="ke1-Ir-BCi" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="I9o-bl-pTx"/>
                 <constraint firstItem="xk0-cp-IqA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MkR-vk-OaB"/>
+                <constraint firstItem="rHI-DM-DtZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="a7R-Qi-ZzO"/>
+                <constraint firstAttribute="trailing" secondItem="rHI-DM-DtZ" secondAttribute="trailing" constant="8" id="bJP-mY-hEW"/>
                 <constraint firstItem="xk0-cp-IqA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cDa-5N-6e5"/>
                 <constraint firstItem="ke1-Ir-BCi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="15" id="eQL-n9-gcU"/>
+                <constraint firstItem="rHI-DM-DtZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="yuQ-rS-5MZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

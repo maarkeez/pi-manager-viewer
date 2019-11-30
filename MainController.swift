@@ -14,14 +14,11 @@ class MainController: UIViewController {
     @IBOutlet weak var myTempLabel: UILabel!
     @IBOutlet weak var myTempView: UIView!
     @IBOutlet weak var myTempLabelStr: UILabel!
+  
+    @IBOutlet weak var myCpuView: PercentageCircle!
+    @IBOutlet weak var myMemoryView: PercentageCircle!
     
-    @IBOutlet weak var myCpuView: UIView!
-    @IBOutlet weak var myCpuLabelStr: UILabel!
-    @IBOutlet weak var myCpuLabel: UILabel!
     
-    @IBOutlet weak var myMemoryView: UIView!
-    @IBOutlet weak var myMemoryLabelStr: UILabel!
-    @IBOutlet weak var myMemoryLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -33,11 +30,8 @@ class MainController: UIViewController {
         // Temperature
         decorateSection(mainView: myTempView, labelStr: myTempLabelStr, label: myTempLabel)
 
-        // Cpu
-        decorateSection(mainView: myCpuView, labelStr: myCpuLabelStr, label: myCpuLabel)
-
-        // Memory
-        decorateSection(mainView: myMemoryView, labelStr: myMemoryLabelStr, label: myMemoryLabel)
+        myCpuView.setTitle("CPU")
+        myMemoryView.setTitle("Memory")
         
         updateCpu()
         updateTemperature()
@@ -66,20 +60,18 @@ class MainController: UIViewController {
     private func updateCpu() {
         
         CpuUsageService.singleton().readCpuUsage().done { cpu in
-                let free = String(format:"%.2f", cpu.getTotal() - cpu.getUsed() )
-                self.myCpuLabel.text = "Used: \(cpu.getUsed()) %\nFree: \(free) %"
-            }.catch{ error in
-                self.myCpuLabel.text = "Could not load cpu"
+            self.myCpuView.drawCircleWith(usedPercentage: cpu.getUsed())
+        }.catch{error in
+            print("could not read cpu usage")
         }
     }
     
     private func updateMemory() {
         
         MemoryUsageService.singleton().readMemoryUsage().done { memory in
-                let free = String(format:"%.2f", memory.getTotal() - memory.getUsed() )
-                self.myMemoryLabel.text = "Used: \(memory.getUsed()) %\nFree: \(free) %"
+                self.myMemoryView.drawCircleWith(usedPercentage: memory.getUsed())
             }.catch{error in
-                self.myMemoryLabel.text = "Could not load memory"
+                print("could not read memory usage")
         }
     }
 
