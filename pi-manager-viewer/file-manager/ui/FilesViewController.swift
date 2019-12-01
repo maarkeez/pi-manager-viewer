@@ -66,6 +66,7 @@ class FilesViewController: UIViewController {
         self.myCurrentPathLabel.text = fileDescribe.getDirectory()
         self.fileDescribe = fileDescribe
         self.myTableView.reloadData()
+        self.myTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
     }
     
     private func cleanFileDescribe(){
