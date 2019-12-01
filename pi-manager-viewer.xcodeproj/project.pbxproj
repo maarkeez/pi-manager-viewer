@@ -28,10 +28,10 @@
 		E5C7798E2381FE6100BFAF0F /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */; };
 		E5C77991238200C000BFAF0F /* GetPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C77990238200C000BFAF0F /* GetPromise.swift */; };
 		E5E93E3E23932E0A000C66FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E93E3D23932E0A000C66FB /* Assets.xcassets */; };
-		E5E93E4123933B0A000C66FB /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E93E4023933B0A000C66FB /* FileManagerService.swift */; };
 		E5E93E4423933BE4000C66FB /* FileDescribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E93E4323933BE4000C66FB /* FileDescribe.swift */; };
 		E5E93E4623933CF1000C66FB /* FileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E93E4523933CF1000C66FB /* FileModel.swift */; };
 		E5E93E4823933CFB000C66FB /* FileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E93E4723933CFB000C66FB /* FileType.swift */; };
+		E5E93E4A23933F4B000C66FB /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E93E4923933F4B000C66FB /* FileManagerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,10 +65,10 @@
 		E5C7798D2381FE6100BFAF0F /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
 		E5C77990238200C000BFAF0F /* GetPromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPromise.swift; sourceTree = "<group>"; };
 		E5E93E3D23932E0A000C66FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E5E93E4023933B0A000C66FB /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileManagerService.swift; path = "../New Group/FileManagerService.swift"; sourceTree = "<group>"; };
 		E5E93E4323933BE4000C66FB /* FileDescribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDescribe.swift; sourceTree = "<group>"; };
 		E5E93E4523933CF1000C66FB /* FileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileModel.swift; sourceTree = "<group>"; };
 		E5E93E4723933CFB000C66FB /* FileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileType.swift; sourceTree = "<group>"; };
+		E5E93E4923933F4B000C66FB /* FileManagerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		F2F74C72C5632D0C0C0707F1 /* Pods_pi_manager_viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pi_manager_viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,14 +107,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E52E543C23931AA7003B3230 /* files */ = {
+		E52E543C23931AA7003B3230 /* ui */ = {
 			isa = PBXGroup;
 			children = (
 				E52E54362392E7FC003B3230 /* FilesViewController.swift */,
 				E52E54382392F22A003B3230 /* FilesViewCellTableViewCell.swift */,
 				E52E54392392F22A003B3230 /* FilesViewCellTableViewCell.xib */,
 			);
-			path = files;
+			path = ui;
 			sourceTree = "<group>";
 		};
 		E59CAA012391BA8C0026AB54 /* ui */ = {
@@ -123,7 +123,6 @@
 				E59CAA022391BAA50026AB54 /* UiConstants.swift */,
 				E59CAA072391C5060026AB54 /* UIViewExtension.swift */,
 				E5C7796A2381599800BFAF0F /* MainController.swift */,
-				E52E543C23931AA7003B3230 /* files */,
 				E59CAA1B2391F4CB0026AB54 /* chart */,
 			);
 			name = ui;
@@ -182,7 +181,7 @@
 				E5C779682381599800BFAF0F /* AppDelegate.swift */,
 				E59CAA012391BA8C0026AB54 /* ui */,
 				E5C7798F238200A100BFAF0F /* restclient */,
-				E5E93E4223933B21000C66FB /* New Group1 */,
+				E5E93E4223933B21000C66FB /* file-manager */,
 				E59CAA0B2391C7460026AB54 /* cpu */,
 				E59CAA102391D0620026AB54 /* memory */,
 				E5C7798A2381FC9800BFAF0F /* temperature */,
@@ -211,15 +210,16 @@
 			path = restclient;
 			sourceTree = "<group>";
 		};
-		E5E93E4223933B21000C66FB /* New Group1 */ = {
+		E5E93E4223933B21000C66FB /* file-manager */ = {
 			isa = PBXGroup;
 			children = (
-				E5E93E4023933B0A000C66FB /* FileManagerService.swift */,
+				E52E543C23931AA7003B3230 /* ui */,
+				E5E93E4923933F4B000C66FB /* FileManagerService.swift */,
 				E5E93E4323933BE4000C66FB /* FileDescribe.swift */,
 				E5E93E4523933CF1000C66FB /* FileModel.swift */,
 				E5E93E4723933CFB000C66FB /* FileType.swift */,
 			);
-			path = "New Group1";
+			path = "file-manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,13 +360,13 @@
 				E59CAA182391E7F40026AB54 /* PercentageCircle.swift in Sources */,
 				E5C7796B2381599800BFAF0F /* MainController.swift in Sources */,
 				E5C779692381599800BFAF0F /* AppDelegate.swift in Sources */,
+				E5E93E4A23933F4B000C66FB /* FileManagerService.swift in Sources */,
 				E5C779812381C80900BFAF0F /* TemperatureService.swift in Sources */,
 				E59CAA082391C5060026AB54 /* UIViewExtension.swift in Sources */,
 				E59CAA0D2391C7600026AB54 /* CpuUsage.swift in Sources */,
 				E59CAA0F2391D05E0026AB54 /* MemoryUsageService.swift in Sources */,
 				E5C779892381CAF000BFAF0F /* Temperature.swift in Sources */,
 				E5E93E4823933CFB000C66FB /* FileType.swift in Sources */,
-				E5E93E4123933B0A000C66FB /* FileManagerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

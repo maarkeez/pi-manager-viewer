@@ -24,7 +24,7 @@ class FileModel {
         return name
     }
     
-    public func geSize() -> String{
+    public func getSize() -> String {
         return size
     }
     

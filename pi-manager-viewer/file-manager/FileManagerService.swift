@@ -23,14 +23,21 @@ class FileManagerService {
     func describeHome() -> Promise<FileDescribe> {
         return describeHomeCall.call();
     }
+    
+    func describeDirectory(_ directory: String, fileName: String) -> Promise<FileDescribe> {
+        let describeDirectoryCall = DescribeDirectoryCall(directory + "/" + fileName)
+        return describeDirectoryCall.call();
+    }
+    
 }
 
-
-private class DescribeHomeCall: GetPromise<FileDescribe> {
+private class FileManagerUtils {
     
-    override func getUrl() -> String {return "api/filemanager/describe/home"}
+    public static func singleton() -> FileManagerUtils {
+        return FileManagerUtils()
+    }
     
-    override func deSerialize(_ json:JSON) -> FileDescribe? {
+    public func toFileDescribe(_ json:JSON) -> FileDescribe {
         let directory = json["directory"].string!
         var files : [FileModel] = []
         
@@ -49,8 +56,32 @@ private class DescribeHomeCall: GetPromise<FileDescribe> {
         }
         
         return FileDescribe(directory: directory, files: files)
-        
+    }
+}
+
+private class DescribeHomeCall: GetPromise<FileDescribe> {
+    
+    override func getUrl() -> String {return "/api/filemanager/describe/home"}
+    
+    override func deSerialize(_ json:JSON) -> FileDescribe? {
+        return FileManagerUtils.singleton().toFileDescribe(json)
         
     }
-    
 }
+
+
+private class DescribeDirectoryCall: GetPromise<FileDescribe> {
+    
+    let directory : String
+    
+    init(_ directory: String){
+        self.directory = directory
+    }
+    
+    override func getUrl() -> String {return "/api/filemanager/describe/directory?directory="+directory}
+    
+    override func deSerialize(_ json:JSON) -> FileDescribe? {
+        return FileManagerUtils.singleton().toFileDescribe(json)
+    }
+}
+
