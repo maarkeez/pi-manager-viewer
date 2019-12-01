@@ -15,11 +15,13 @@ class FilesViewController: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var myHeaderView: UIView!
     @IBOutlet weak var myCurrentPathLabel: UILabel!
-    
+
     let cellIdentifier = "FilesViewCellTableViewCell"
     let fileService = FileManagerService.singleton()
     var fileDescribe : FileDescribe?
+    var previousDirectory : [String] = []
     
+    // MARK - UI Actions
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +48,18 @@ class FilesViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func goToPreviousDir(_ sender: UIButton) {
+        if previousDirectory.count > 0 {
+            if let lastDirectory = previousDirectory.popLast() {
+                describeDirectory(lastDirectory, updatePreviousDir: false)
+            }
+        }
+    }
+    
+    
+    // MARK - Functions
+    
     private func describeHomeDirectory(){
         fileService.describeHome().done { fileDescribe in
             self.reloadFileDescribe(fileDescribe)
@@ -54,19 +68,34 @@ class FilesViewController: UIViewController {
         }
     }
     
-    private func describeDirectory(_ directory: String, fileName: String){
-        fileService.describeDirectory(directory, fileName: fileName).done { fileDescribe in
-            self.reloadFileDescribe(fileDescribe)
+    private func describeDirectory(_ directory: String){
+        describeDirectory(directory, updatePreviousDir: true)
+    }
+        
+    private func describeDirectory(_ directory: String, updatePreviousDir: Bool){
+        fileService.describeDirectory(directory).done { fileDescribe in
+            self.reloadFileDescribe(fileDescribe, updatePreviousDir: updatePreviousDir)
         }.catch{ error in
             self.cleanFileDescribe()
         }
     }
     
     private func reloadFileDescribe(_ fileDescribe: FileDescribe){
+        reloadFileDescribe(fileDescribe, updatePreviousDir: true)
+    }
+    
+    private func reloadFileDescribe(_ fileDescribe: FileDescribe, updatePreviousDir: Bool){
+        if updatePreviousDir {
+            if let fileDescribeAux = self.fileDescribe {
+                self.previousDirectory.append(fileDescribeAux.getDirectory())
+            }
+        }
         self.myCurrentPathLabel.text = fileDescribe.getDirectory()
         self.fileDescribe = fileDescribe
         self.myTableView.reloadData()
-        self.myTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
+        if fileDescribe.getFiles().count > 0 {
+            self.myTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
+        }
     }
     
     private func cleanFileDescribe(){
@@ -86,8 +115,7 @@ extension FilesViewController : UITableViewDelegate {
         if let fileDescribeAux = fileDescribe{
             let fileModel = fileDescribeAux.getFiles()[index]
             if FileType.FOLDER ==  fileModel.getType() {
-                describeDirectory(fileDescribeAux.getDirectory(), fileName: fileModel.getName())
-                
+                describeDirectory(fileDescribeAux.getDirectory() + "/" + fileModel.getName())
             }
         }
     }

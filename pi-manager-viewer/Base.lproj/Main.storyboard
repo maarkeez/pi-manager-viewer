@@ -128,7 +128,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/home/pi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGw-uE-8tP">
-                                        <rect key="frame" x="16" y="10" width="382" height="30"/>
+                                        <rect key="frame" x="16" y="10" width="338" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="JtS-VL-jvi"/>
                                         </constraints>
@@ -136,13 +136,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSR-xO-RoV">
+                                        <rect key="frame" x="362" y="7" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="kYD-NB-z82"/>
+                                            <constraint firstAttribute="height" constant="36" id="weD-FX-DQ9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="left-arrow"/>
+                                        <connections>
+                                            <action selector="goToPreviousDir:" destination="GmV-pe-aeh" eventType="touchUpInside" id="jhI-Bm-2fP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="OSR-xO-RoV" firstAttribute="centerY" secondItem="TT3-NR-is5" secondAttribute="centerY" id="0P0-PU-5yh"/>
                                     <constraint firstAttribute="height" constant="50" id="AW6-ky-bU7"/>
+                                    <constraint firstAttribute="trailing" secondItem="OSR-xO-RoV" secondAttribute="trailing" constant="16" id="FhU-9g-T10"/>
                                     <constraint firstItem="OGw-uE-8tP" firstAttribute="leading" secondItem="TT3-NR-is5" secondAttribute="leading" constant="16" id="JbX-3e-oBB"/>
-                                    <constraint firstAttribute="trailing" secondItem="OGw-uE-8tP" secondAttribute="trailing" constant="16" id="NvP-Gk-p8p"/>
                                     <constraint firstItem="OGw-uE-8tP" firstAttribute="centerY" secondItem="TT3-NR-is5" secondAttribute="centerY" id="gpw-xV-N1g"/>
+                                    <constraint firstItem="OSR-xO-RoV" firstAttribute="leading" secondItem="OGw-uE-8tP" secondAttribute="trailing" constant="8" id="kdt-Y0-BiQ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -197,6 +210,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="left-arrow" width="512" height="512"/>
         <image name="termometro-frio" width="512" height="512"/>
     </resources>
 </document>

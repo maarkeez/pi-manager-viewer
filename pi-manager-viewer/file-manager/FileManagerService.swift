@@ -24,8 +24,8 @@ class FileManagerService {
         return describeHomeCall.call();
     }
     
-    func describeDirectory(_ directory: String, fileName: String) -> Promise<FileDescribe> {
-        let describeDirectoryCall = DescribeDirectoryCall(directory + "/" + fileName)
+    func describeDirectory(_ directory: String) -> Promise<FileDescribe> {
+        let describeDirectoryCall = DescribeDirectoryCall(directory)
         return describeDirectoryCall.call();
     }
     
